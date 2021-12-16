@@ -1,0 +1,51 @@
+[
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 1,
+			"category_name" : "cereale"
+		}
+	},
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 2,
+			"category_name" : "ketchup-sosuri"
+		}
+	},
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 3,
+			"category_name" : "condimente-mixuri"
+		}
+	},
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 4,
+			"category_name" : "paste-fainoase"
+		}
+	},
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 5,
+			"category_name" : "chipsuri-snacksuri"
+		}
+	},
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 6,
+			"category_name" : "pulsoximetre"
+		}
+	},
+	{   
+		"model":"dataAnalyzer.category",
+		"fields":{ 
+			"id" : 7,
+			"category_name" : "glucometre"
+		}
+	}
+]

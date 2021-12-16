@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  db:
+    container_name: mysql_db
+    image: mysql:latest
+    environment:
+      MYSQL_PASSWORD: Vladut123
+      MYSQL_ROOT_PASSWORD: Vladut123
+      MYSQL_DATABASE: webspider
+    ports:
+      - "3306:3306"
+    networks:
+      - testnw
+    volumes:
+      - dbs:/var/lib/mysql
+      
+  backend:
+    container_name: backend
+    image: django_backend:latest
+    command: ["python", "./data__analyzer/manage.py", "runserver", "0.0.0.0:8080"]
+    networks:
+      - testnw
+    ports:
+      - "8080:8080"
+    volumes:
+      - dbs:/var/lib/mysql
+    depends_on:
+      - "db"
+
+
+
+networks:
+  testnw:
+volumes:
+  dbs:

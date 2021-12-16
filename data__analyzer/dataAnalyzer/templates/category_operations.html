@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<ul>
+    <form class="col text-center" action="/add_category" method="get">
+        <h2 style="margin-top: 3%;">Adaugati o noua categorie</h2>
+        <input type="text" style="width: 90%; height: 10%; font-size: 24; margin: 5%;" name="category">
+        <input type="submit" style="width: 10%; height: 5%; font-size: 28;  margin-bottom: 2%;" value="Adaugati">
+    </form>
+</ul>
+
+
+<ul>
+    <form class="col text-center" action="/delete_category" method="get">
+        <select class="form-control" style="width: 90%; height: 10%; font-size: 24; margin: 5%;" name="category_id">
+            <option selected="selected" disabled>Alegeti o categorie pentru a face o operatie asupra lui:</option>
+                {% for category in categories %}
+                    <option style="font-size: 20;" value={{category.id}}>{{category.category_name}}</option>
+                {% endfor %}    
+        </select>
+        <input type="submit" style="width: 10%; height: 5%; font-size: 28; margin-bottom: 2%;" value="Delete">
+    </form>
+</ul>
+
+
+<ul>
+    <form class="col text-center" action="/update_category" method="get">
+        <h2 style="margin-top: 3%;">Updatati o categorie</h2>
+        <select class="form-control" style="width: 90%; height: 10%; font-size: 24; margin: 5%;" name="category_id">
+            <option selected="selected" disabled>Alegeti o categorie pentru a face update:</option>
+                {% for category in categories %}
+                    <option style="font-size: 20;" value={{category.id}}>{{category.category_name}}</option>
+                {% endfor %}    
+        </select>
+        <input type="text" style="width: 90%; height: 10%; font-size: 24; margin-bottom: 2%;" name="category_new_name">
+        <input type="submit" style="width: 10%; height: 5%; font-size: 28; margin-bottom: 2%;" value="Update">
+    </form>
+</ul>
+
+{% endblock %}
+
+

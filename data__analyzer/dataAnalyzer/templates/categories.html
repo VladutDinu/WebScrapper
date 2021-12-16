@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+          <tr>
+            <td>
+              <button>
+                <a href="/items_page/{{category.category_name}}">
+                  {{category.category_name}}
+                </a> 
+              </button>
+          </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+</ul>
+{% endblock %}
+
+

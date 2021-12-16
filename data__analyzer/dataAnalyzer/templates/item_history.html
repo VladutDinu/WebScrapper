@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+  <h3><a  target='_blank' href={{items.0.link}}>{{items.0.name}}</a></h3>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Price (Lei)</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{item.current_price}}</td>
+            <td>{{item.current_date}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+</ul>
+<ul>
+  <H3>Cel mai mare si cel mai mic pret</H3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Price (Lei)</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in minmax %}
+        <tr>
+          <td>{{item.current_price}}</td>
+          <td>{{item.current_date}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</ul>
+{% endblock %}
+
+

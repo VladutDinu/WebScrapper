@@ -1,0 +1,10 @@
+[
+	{   "model":"dataAnalyzer.item",
+		"fields":{ "id" : 541,
+		"name" : "Pachet: 2 x Cereale integrale Nesquik, 500 gr.",
+		"item_type" : "cereale",
+		"current_date" : "2021-11-30 17:20:12",
+		"link" : "https://www.emag.ro/cereale-integrale-nesquik-500-gr-12247956/pd/DW7FGBMBM/",
+		"current_price" : 17.98}
+	}
+]
